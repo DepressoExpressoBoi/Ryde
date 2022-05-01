@@ -1,0 +1,119 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Bebas Neue', cursive;
+}
+body {
+	background-color: #CBF3F9;
+	background-blend-mode: luminosity;
+	background-image: url("http://26hv7gq44hr259w0w3adpnam-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/ElPaso-TX-800.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: black;
+	font-family: 'Bebas Neue', cursive;
+}
+.logo{
+	color: #CBF3F9;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 30px;
+}
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+.nav-links li{
+	list-style: none;
+}
+.nav-links a{
+	color: white;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.burger{
+	display: none;
+	cursor: pointer;
+}
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	margin: 5px;
+}
+@media screen and (max-width: 1024px){
+	.nav-links{
+		width: 60%
+	}
+
+}
+@media screen and (max-width: 1024px){
+	body{ 
+		overflow-x: hidden;
+	}
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-links li{
+		opacity: 1;
+
+	}
+	.burger{
+		display: block;
+	}
+}
+.nav-active{
+	transform: translateX(0%);
+}
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+.toggle .line1{
+	transform: rotate(-45deg translate(-5px,6px));
+}
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+	transform: rotate(45deg translate(-5px,-6px));
+}
+h1{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 7em;
+	color: #ffff66;
+	text-shadow: 0 0 50px black;
+}
